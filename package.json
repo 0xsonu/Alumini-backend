@@ -1,0 +1,25 @@
+{
+  "name": "alumini-backend",
+  "version": "1.0.0",
+  "description": "Backend For Alumini Application",
+  "main": "server.js",
+  "repository": "https://github.com/SonuKumar81800/Alumini-backend.git",
+  "author": "sonukumar81800 <sonu.patna0808@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node 'dist/server.js'",
+    "build": "tsc -p . && ncp src/schema dist/schema",
+    "dev": "yarn run build:dev",
+    "build:dev": "nodemon --exec ts-node ./src/server.ts -e ts,graphql"
+  },
+  "dependencies": {
+    "@graphql-tools/load-files": "^6.5.3",
+    "@graphql-tools/merge": "^8.2.10",
+    "@graphql-tools/schema": "^8.3.10",
+    "apollo-server-core": "^3.6.7",
+    "apollo-server-express": "^3.6.7",
+    "express": "^4.17.3",
+    "graphql": "^16.3.0"
+  }
+}
