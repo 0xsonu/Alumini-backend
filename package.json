@@ -12,7 +12,7 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "ts-node index.ts",
     "start:dev": "node 'dist/server.js'",
     "build": "tsc -p . && ncp src/schema dist/schema",
     "dev": "yarn run build:dev",

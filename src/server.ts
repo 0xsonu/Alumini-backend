@@ -3,9 +3,7 @@ import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core';
 import * as express from 'express';
 import * as http from 'http';
 import { schema } from './schema';
-import * as dotenv from 'dotenv';
-dotenv.config();
-async function startApolloServer() {
+export const startApolloServer = async () => {
   const app = express();
 
   const httpServer = http.createServer(app);
@@ -18,9 +16,7 @@ async function startApolloServer() {
   await server.start();
 
   server.applyMiddleware({ app });
-
   await new Promise<void>((resolve) => httpServer.listen({ port: process.env.PORT }, resolve));
 
   console.log(`🚀 Server ready at ${server.graphqlPath}`);
-}
-const typeDefs = startApolloServer();
+};
