@@ -12,8 +12,9 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "start": "node 'dist/server.js'",
-    "build": "tsc -p . && ncp src/schema dist/schema",
+    "start": "ts-node src/server.ts",
+    "start:dev": "node 'dist/server.js'",
+    "build:deve": "tsc -p . && ncp src/schema dist/schema",
     "dev": "yarn run build:dev",
     "build:dev": "nodemon --exec ts-node ./src/server.ts -e ts,graphql"
   },
