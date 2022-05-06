@@ -23,5 +23,6 @@
     "rootDir": "src",
     "outDir": "./dist"
   },
-  "include": ["lib", "src"]
+  "include": ["lib", "src"],
+  "exclude": ["node_modules"]
 }
