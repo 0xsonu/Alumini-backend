@@ -7,6 +7,10 @@
   "author": "sonukumar81800 <sonu.patna0808@gmail.com>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "start": "node 'dist/server.js'",
     "build": "tsc -p . && ncp src/schema dist/schema",
