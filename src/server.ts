@@ -5,6 +5,10 @@ import * as http from 'http';
 import { schema } from './schema';
 export const startApolloServer = async () => {
   const app = express();
+  app.use(express.json());
+  app.get('/', (req, res, next) => {
+    res.redirect('/graphql');
+  });
 
   const httpServer = http.createServer(app);
 
